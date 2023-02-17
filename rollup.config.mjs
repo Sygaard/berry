@@ -27,7 +27,7 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
-      postcss({ extract: "input.css" }),
+      postcss({ extract: "sygaard.css" }),
       resolve(),
       commonjs(),
       typescript({

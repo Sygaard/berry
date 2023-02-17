@@ -1,4 +1,4 @@
-import "../src/input.css";
+import "../src/sygaard.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
