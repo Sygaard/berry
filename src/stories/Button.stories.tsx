@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 export const Default: ComponentStory<typeof Button> = () => (
-  <Button leftIcon={<HomeIcon style={{ width: "20px", height: "20px" }} />}>
+  <Button leftIcon={<HomeIcon style={{ width: "16px", height: "16px" }} />}>
     Default
   </Button>
 );
