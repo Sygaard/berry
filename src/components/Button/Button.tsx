@@ -2,7 +2,7 @@ import React, { type ComponentPropsWithoutRef, type ElementType, type ReactNode 
 import { cva, type VariantProps } from "class-variance-authority";
 
 const styles = cva(
-  "inline-flex whitespace-nowrap justify-center items-center font-semibold space-x-10",
+  "inline-flex whitespace-nowrap justify-center items-center font-semibold",
   {
     variants: {
       size: {
