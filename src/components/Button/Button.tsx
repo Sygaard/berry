@@ -91,6 +91,7 @@ const styles = cva(
       variant: "solid",
       colorScheme: "gray",
       borderRadius: "md",
+      justifyContent: "center"
     },
   }
 );
@@ -110,6 +111,7 @@ export default function Button<T extends ElementType = "button">({
   colorScheme,
   fullWidth,
   borderRadius,
+  justifyContent,
   ...props
 }: ButtonProps<T> &
   Omit<ComponentPropsWithoutRef<T>, keyof ButtonProps<T>> &
@@ -118,7 +120,7 @@ export default function Button<T extends ElementType = "button">({
 
   return (
     <Component
-      className={styles({ size, variant, colorScheme, fullWidth, borderRadius })}
+      className={styles({ size, variant, colorScheme, fullWidth, borderRadius, justifyContent })}
       {...props}
     >
       {leftIcon ? (
