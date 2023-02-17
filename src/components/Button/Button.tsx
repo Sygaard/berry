@@ -31,7 +31,8 @@ const styles = cva(
       },
       justifyContent: {
         center: "justify-center",
-        start: "justify-start"
+        start: "justify-start",
+        end: "justify-end"
       }
     },
     compoundVariants: [
