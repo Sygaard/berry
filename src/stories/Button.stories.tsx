@@ -1,4 +1,5 @@
 import React from "react";
+import { HomeIcon } from "@heroicons/react/24/solid";
 
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
@@ -10,5 +11,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 export const Default: ComponentStory<typeof Button> = () => (
-  <Button>Default</Button>
+  <Button leftIcon={<HomeIcon style={{ width: "20px", height: "20px" }} />}>
+    Default
+  </Button>
 );

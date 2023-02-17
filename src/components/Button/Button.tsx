@@ -2,7 +2,7 @@ import React, { type ComponentPropsWithoutRef, type ElementType, type ReactNode 
 import { cva, type VariantProps } from "class-variance-authority";
 
 const styles = cva(
-  "inline-flex whitespace-nowrap justify-center items-center font-semibold",
+  "inline-flex whitespace-nowrap justify-center items-center font-semibold space-x-10",
   {
     variants: {
       size: {
@@ -28,6 +28,10 @@ const styles = cva(
       borderRadius: {
         md: "rounded-md",
         full: "rounded-full"
+      },
+      justifyContent: {
+        center: "justify-center",
+        start: "start"
       }
     },
     compoundVariants: [
@@ -94,11 +98,13 @@ const styles = cva(
 type ButtonProps<T extends ElementType> = {
   as?: T;
   children: ReactNode;
+  leftIcon?: ReactNode,
 };
 
 export default function Button<T extends ElementType = "button">({
   as,
   children,
+  leftIcon,
   size,
   variant,
   colorScheme,
@@ -115,6 +121,9 @@ export default function Button<T extends ElementType = "button">({
       className={styles({ size, variant, colorScheme, fullWidth, borderRadius })}
       {...props}
     >
+      {leftIcon ? (
+        <span className="mr-2">{leftIcon}</span>
+      ) : null}
       {children}
     </Component>
   );
