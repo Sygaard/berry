@@ -30,8 +30,8 @@ const styles = cva(
         full: "rounded-full"
       },
       justifyContent: {
-        center: "justify-center",
         start: "justify-start",
+        center: "justify-center",
         end: "justify-end"
       }
     },
@@ -99,7 +99,7 @@ const styles = cva(
 
 type ButtonProps<T extends ElementType> = {
   as?: T;
-  children: ReactNode;
+  children?: ReactNode;
   leftIcon?: ReactNode,
 };
 
